@@ -167,6 +167,9 @@ python load_test.py --requests 100
 
 ## 📖 Documentation
 
+- [Quick Start Guide](QUICKSTART.md) - Get up and running in 5 minutes
+- [MCP Workflows](MCP_WORKFLOWS.md) - Example observability queries
+- [Combined MCP Workflow](MCP_COMBINED_WORKFLOW.md) - **NEW!** Use both Mastercard + Elasticsearch MCP together
 - [Mastercard API Documentation](https://developer.mastercard.com/)
 - [OpenTelemetry Python](https://opentelemetry.io/docs/instrumentation/python/)
 - [Elastic APM](https://www.elastic.co/guide/en/apm/get-started/current/overview.html)
