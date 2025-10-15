@@ -55,25 +55,44 @@ This demo showcases Mastercard APIs integrated with OpenTelemetry for full obser
 - Elastic Serverless Cluster (configured in .env)
 - Cursor with MCP support
 
-## 🔧 Setup
+## 🔧 Quick Start
 
 1. **Install Dependencies**
    ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
    ```
 
 2. **Configure Environment**
    ```bash
-   cp .env.example .env
-   # Edit .env with your Mastercard & Elastic credentials
+   cp env.example .env
+   # Edit .env with your Elastic credentials
+   # Mock mode is enabled by default for Mastercard APIs
    ```
 
-3. **Run the Demo**
+3. **Run the Demo Application**
    ```bash
-   python demo_app.py
+   source venv/bin/activate
+   python3 demo_app.py
    ```
 
-4. **Access the API**
+4. **Generate Test Traffic**
+   ```bash
+   # In a new terminal, with venv activated
+   source venv/bin/activate
+   python3 load_test.py --requests 50
+   ```
+   This creates traces, metrics, and logs in Elastic!
+
+5. **Query with MCP in Cursor**
+   ```
+   Show me the latest traces from mastercard-demo service
+   List all Elasticsearch indices
+   What's the average response time for API calls?
+   ```
+
+6. **Access the API Documentation**
    ```
    http://localhost:8000/docs
    ```
