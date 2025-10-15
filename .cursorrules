@@ -1,0 +1,42 @@
+# Cursor Rules for Mastercard Demo Project
+
+## Project Context
+This is a demo application showcasing Mastercard APIs with full OpenTelemetry observability flowing to Elastic Serverless. The project uses MCP (Model Context Protocol) workflows for intelligent monitoring.
+
+## Key Technologies
+- FastAPI for the web application
+- OpenTelemetry for observability (traces, metrics, logs)
+- Elastic Serverless for telemetry storage and analysis
+- MCP for natural language observability queries
+- Mastercard APIs (currently in mock mode)
+
+## Code Style
+- Use Python type hints throughout
+- Follow PEP 8 conventions
+- Add docstrings to all functions and classes
+- Use async/await for I/O operations
+- Keep functions focused and single-purpose
+
+## OpenTelemetry Conventions
+- Always add custom spans for important operations
+- Set meaningful span attributes (user_id, transaction_id, etc.)
+- Record exceptions in spans when they occur
+- Use semantic conventions for attribute names
+- Add custom metrics for business-critical operations
+
+## MCP Workflows
+When helping with MCP queries, use these patterns:
+- Time ranges: "now-15m", "now-1h", "now-24h"
+- Service filter: service.name="mastercard-demo"
+- Always specify index patterns: traces-apm*, logs-*, metrics-*
+
+## Testing
+- Generate test traffic using load_test.py
+- Use scenario scripts for realistic workflows
+- Always verify traces appear in Elastic after changes
+
+## Environment
+- Use .env for configuration (never commit!)
+- Mock mode enabled by default (ENABLE_MOCK_MODE=true)
+- Check env.example for required variables
+

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "elasticsearch-observability": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@elastic/elasticsearch-mcp-server@latest"
+      ],
+      "env": {
+        "ELASTICSEARCH_URL": "https://a5630c65c43f4f299288c392af0c2f45.es.us-east-1.aws.elastic.cloud",
+        "ELASTICSEARCH_API_KEY": "Z0pQRmtaa0IxRllTajhaRjUtNUk6ZEtNbDQyTTFMdGVzS1diOXpnWEZSUQ=="
+      }
+    }
+  }
+}
+
