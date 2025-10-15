@@ -37,7 +37,7 @@ def setup_opentelemetry():
     
     # Configure headers with authorization
     headers = {
-        "Authorization": f"Bearer {settings.elastic_otel_api_key}"
+        "Authorization": f"ApiKey {settings.elastic_otel_api_key}"
     }
     
     # === TRACES ===
